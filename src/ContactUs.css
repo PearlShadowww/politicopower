@@ -1,0 +1,94 @@
+/* Contact Us Section Styles */
+.contact-us-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for better responsiveness */
+    padding: 40px 20px;
+    background-color: #f0f0f0; /* Light grey background */
+  }
+  
+  .contact-info,
+  .contact-form {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    flex: 1; /* Equal flex values to make sections equal in width */
+    max-width: 50%; /* Ensure each section does not exceed 50% of container width */
+  }
+  
+  .contact-form {
+    padding: 20px; /* Increased padding for form section */
+  }
+  
+  .contact-info {
+    padding: 20px; /* Increased padding inside the contact info section */
+    margin-left: 0px; /* Increased right margin for more space between sections */
+  }
+  
+  .contact-info h2 {
+    font-size: 1.8rem;
+    color: #4b0082; /* Purple color for heading */
+    margin-bottom: 20px;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+    color: #333; /* Dark grey text color */
+    margin-bottom: 10px;
+  }
+  
+  .contact-form h2 {
+    font-size: 1.8rem;
+    color: #4b0082; /* Purple color for heading */
+    margin-bottom: 20px;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form p {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form label {
+    font-size: 1rem;
+    color: #333; /* Dark grey text color */
+    display: block;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Light grey border */
+    box-sizing: border-box; /* Include padding and border in width */
+  }
+  
+  .contact-form button {
+    background-color: #4b0082; /* Purple button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #5e00a4; /* Darker purple on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-info,
+    .contact-form {
+      max-width: 100%; /* Full width on mobile */
+      margin-right: 0; /* Remove right margin for mobile */
+      margin-left: 0; /* Remove left margin for mobile if needed */
+    }
+  
+    .contact-us-section {
+      flex-direction: column; /* Stack sections vertically on mobile */
+    }
+  }
+  

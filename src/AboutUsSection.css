@@ -1,0 +1,46 @@
+/* About Us Section Styles */
+.about-us-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Light grey background */
+  }
+  
+  .about-us-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .about-us-main {
+    flex: 0 0 40%; /* 40% width */
+    padding: 20px;
+  }
+  
+  .about-us-heading {
+    font-size: 2rem;
+    color: #4b0082; /* Purple color for heading */
+  }
+  
+  .about-us-column {
+    flex: 1; /* Flex-grow to fill the space equally */
+    padding: 20px;
+    max-width: 30%; /* Ensure columns take up 30% width each */
+  }
+  
+  .about-us-paragraph {
+    font-size: 1rem;
+    color: #333; /* Dark grey text color */
+    margin-bottom: 20px; /* Space between paragraphs */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .about-us-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-us-main,
+    .about-us-column {
+      max-width: 100%;
+    }
+  }
+  

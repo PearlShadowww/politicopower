@@ -1,0 +1,61 @@
+/* Client Testimony Section Styles */
+.client-testimony-section {
+    padding: 40px 20px;
+    background-color: #fffaf0; /* Light gold background */
+  }
+  
+  .testimony-main-heading {
+    font-size: 2rem;
+    color: #4b0082; /* Purple color for main heading */
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .client-testimony-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .testimony-card {
+    flex: 1;
+    max-width: 30%;
+    padding: 20px;
+    margin: 0 10px;
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    border: 1px solid #e0c060; /* Gold border */
+  }
+  
+  .testimony-heading {
+    font-size: 1.5rem;
+    color: #4b0082; /* Purple color for headings */
+    margin-bottom: 10px;
+  }
+  
+  .testimony-subheading {
+    display: block;
+    font-style: italic;
+    color: #e0c060; /* Gold color for subheading */
+    margin-bottom: 20px;
+  }
+  
+  .testimony-paragraph {
+    font-size: 1rem;
+    color: #333; /* Dark grey text color */
+    line-height: 1.6;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .client-testimony-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .testimony-card {
+      max-width: 100%;
+      margin-bottom: 20px; /* Space between cards on mobile */
+    }
+  }
+  
