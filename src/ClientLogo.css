@@ -1,47 +1,55 @@
 /* Client Logo Section Styles */
 .client-logo-section {
-    overflow: hidden;
-    width: 100%;
-    background-color: #f8f8f8; /* Light grey background */
-    padding: 20px 0;
+  overflow: hidden;
+  width: 100%;
+  background-color: #f8f8f8; /* Light grey background */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.client-logo-heading {
+  font-size: 2rem;
+  color: #333; /* Darker grey for better readability */
+  margin-bottom: 20px;
+}
+
+.logo-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: 200%; /* Twice the width to handle seamless looping */
+}
+
+.logo-slide {
+  min-width: 20%; /* Adjusted to fit more logos in view */
+  padding: 0 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.logo-slide:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.logo-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* Rounded corners for logos */
+}
+
+/* Continuous Scrolling Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
-  
-  .logo-slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  100% {
+    transform: translateX(-50%);
   }
-  
-  .logo-track {
-    display: flex;
-    animation: scroll 20s linear infinite;
-  }
-  
-  .logo-slide {
-    min-width: 25%; /* Ensures only 4 logos are visible at a time */
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
-  
-  .logo-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  /* Continuous Scrolling Animation */
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  
-  /* Ensure the logos wrap and continue seamlessly */
-  .logo-track {
-    width: 200%; /* Twice the width to handle seamless looping */
-  }
-  
+}

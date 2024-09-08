@@ -4,14 +4,16 @@
   align-items: center;
   justify-content: space-between;
   padding: 40px 20px;
-  background-color: #e0e0e0; /* Light grey background */
+  background-color: #ffffff; /* Light grey background */
+  border-radius: 2%;
+  margin: 10px;
+
 }
 
 .hero-content {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: center;
 }
 
 .hero-text {
@@ -20,13 +22,13 @@
 
 .hero-heading {
   font-size: 2.5rem;
-  color: #4b0082; /* Purple color for heading */
+  color: #000000; /* Purple color for heading */
   margin-bottom: 10px;
 }
 
 .hero-tagline {
   font-size: 1.2rem;
-  color: #666; /* Darker grey for tagline */
+  color: #181818; /* Darker grey for tagline */
   margin-bottom: 20px;
 }
 
@@ -34,14 +36,17 @@
   display: inline-block;
   padding: 10px 20px;
   font-size: 1rem;
-  color: #fff;
-  background-color: #4b0082; /* Purple background */
+  color: #000000;
+  background-color: #F9A826; /* Purple background */
   text-decoration: none;
   border-radius: 5px;
+  margin-top: 30px;
+  border: #000000 1px solid;
 }
 
 .cta-button:hover {
-  background-color: #3a0066; /* Darker purple for hover effect */
+  background-color: #000000;
+  color: #ffffff /* Darker purple for hover effect */
 }
 
 .hero-image img {

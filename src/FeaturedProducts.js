@@ -1,40 +1,35 @@
 import React from 'react';
-import './FeaturedProducts.css'; // Import your CSS file for styling
+import './FeaturedProducts.css';
 
 const FeaturedProducts = () => {
-  // Example product data (replace with your actual data)
   const products = [
-    { id: 1, name: "Product 1", description: "Description of Product 1", imgSrc: "https://via.placeholder.com/150", link: "/products/1" },
-    { id: 2, name: "Product 2", description: "Description of Product 2", imgSrc: "https://via.placeholder.com/150", link: "/products/2" },
-    { id: 3, name: "Product 3", description: "Description of Product 3", imgSrc: "https://via.placeholder.com/150", link: "/products/3" },
-    { id: 4, name: "Product 4", description: "Description of Product 4", imgSrc: "https://via.placeholder.com/150", link: "/products/4" },
-    { id: 5, name: "Product 5", description: "Description of Product 5", imgSrc: "https://via.placeholder.com/150", link: "/products/5" },
-    { id: 6, name: "Product 6", description: "Description of Product 6", imgSrc: "https://via.placeholder.com/150", link: "/products/6" },
-    { id: 7, name: "Product 7", description: "Description of Product 7", imgSrc: "https://via.placeholder.com/150", link: "/products/7" },
-    { id: 8, name: "Product 8", description: "Description of Product 8", imgSrc: "https://via.placeholder.com/150", link: "/products/8" },
-    { id: 9, name: "Product 9", description: "Description of Product 9", imgSrc: "https://via.placeholder.com/150", link: "/products/9" }
+    { id: 1, title: 'HALF SLEEVES COTTON TSHIRT', description: 'Available in every Size and Color', imageUrl: 'https://www.imghost.net/ib/6rZnM9Yt1VYSnfs_1725175174.png' },
+    { id: 2, title: 'FULL SLEEVES COTTON TSHIRT', description: 'This is another great product.', imageUrl: 'https://www.imghost.net/ib/gOovTMlUSTSrWMv_1725217091.png' },
+    { id: 3, title: 'POLO TSHIRTS', description: 'This product is also great.', imageUrl: 'https://www.imghost.net/ib/MACuwxB1NMUqbSr_1725217093.png' },
+    { id: 4, title: 'SWEAT-SHIRT WITHOUT HOOD', description: 'You will love this product.', imageUrl: 'https://www.imghost.net/ib/emJnLgtJHJDru1d_1725217093.png' },
+    { id: 5, title: 'HOODIE', description: 'Best product in the market.', imageUrl: 'https://www.imghost.net/ib/3VK0vXG2yapREvc_1725217206.png' },
+    { id: 6, title: 'LARGE CLOTH BANNER', description: 'Highly recommended product.', imageUrl: 'https://www.imghost.net/ib/2UTtrCcSx4TZXCM_1725217205.png' },
+    { id: 7, title: 'TABLE FLAGS', description: 'Must have product.', imageUrl: 'https://www.imghost.net/ib/pvEoNnO1FEAHOgU_1725217203.png' },
+    { id: 8, title: 'BANNER', description: 'Top quality product.', imageUrl: 'https://www.imghost.net/ib/ZhCwcGIIBqk93mH_1725217228.png' },
+    { id: 9, title: 'MUGS', description: 'Excellent product.', imageUrl: 'https://www.imghost.net/ib/3SZWuPGJLCPAw48_1725218089.png' },
+    { id: 10, title: 'MUGS', description: 'Excellent product.', imageUrl: 'https://www.imghost.net/ib/3SZWuPGJLCPAw48_1725218089.png' },
+    { id: 11, title: 'MUGS', description: 'Excellent product.', imageUrl: 'https://www.imghost.net/ib/3SZWuPGJLCPAw48_1725218089.png' },
+    { id: 12, title: 'MUGS', description: 'Excellent product.', imageUrl: 'https://www.imghost.net/ib/3SZWuPGJLCPAw48_1725218089.png' },
+
   ];
 
   return (
-    <section className="featured-products-section">
-      <h2 className="featured-products-heading">Featured Products</h2>
-      <div className="featured-products-grid">
-        {products.map((product) => (
-          <a
-            key={product.id}
-            href={product.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="product-card"
-          >
-            <img src={product.imgSrc} alt={product.name} className="product-image" />
-            <h3 className="product-name">{product.name}</h3>
-            <p className="product-description">{product.description}</p>
-          </a>
+    <section className="featured-products">
+      <h2 className="heading">Fully Customisable Products</h2>
+      <p className="custom-line">Every product mentioned is available in every SIZE and COLOR</p> {/* Custom p tag between heading and product cards */}
+      <div className="grid-container">
+        {products.map(product => (
+          <div key={product.id} className="card">
+            <img src={product.imageUrl} alt={product.title} className="image" />
+            <h3 className="product-title">{product.title}</h3>
+            <p className="description">{product.description}</p>
+          </div>
         ))}
-      </div>
-      <div className="view-all-container">
-        <a href="/products" className="view-all-button">View All Products</a>
       </div>
     </section>
   );

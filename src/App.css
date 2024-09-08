@@ -43,3 +43,10 @@
     scrollbar-color: #b480da #f1f1f1;
     scrollbar-width: thick;
 }
+
+/* Inside your global CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
