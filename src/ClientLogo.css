@@ -2,14 +2,14 @@
 .client-logo-section {
   overflow: hidden;
   width: 100%;
-  background-color: #f8f8f8; /* Light grey background */
+  background-color: #000000; /* Black background */
   padding: 40px 0;
   text-align: center;
 }
 
 .client-logo-heading {
   font-size: 2rem;
-  color: #333; /* Darker grey for better readability */
+  color: #f9a826; /* Use #f9a826 for the heading text */
   margin-bottom: 20px;
 }
 
@@ -22,26 +22,26 @@
 
 .logo-track {
   display: flex;
-  animation: scroll 30s linear infinite;
-  width: 200%; /* Twice the width to handle seamless looping */
+  animation: scroll 60s linear infinite; /* Slowed down the animation for smoother scrolling */
+  width: calc(200% + 20px); /* Adjusted to ensure seamless looping */
 }
 
 .logo-slide {
-  min-width: 20%; /* Adjusted to fit more logos in view */
+  flex: 0 0 12.5%; /* Make sure each slide takes up 12.5% of the track */
   padding: 0 20px;
   box-sizing: border-box;
-  transition: transform 0.3s ease; /* Smooth transition on hover */
-}
-
-.logo-slide:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo-slide img {
-  width: 100%;
+  width: 80%; /* Set all logos to the same width */
   height: auto;
   display: block;
   border-radius: 8px; /* Rounded corners for logos */
+  background-color: white; /* White background behind the logos */
+  padding: 10px;
 }
 
 /* Continuous Scrolling Animation */
@@ -50,6 +50,6 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Moves the logos by 50% of the total width */
   }
 }

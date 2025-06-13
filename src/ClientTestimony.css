@@ -1,8 +1,11 @@
 /* Client Testimony Section Styles */
 .client-testimony-section {
   padding: 60px 40px;
-  background-color: #1a1a1a; /* Dark background */
-  border-radius: 20px;
+  background: radial-gradient(circle, rgb(165, 107, 13) 0%, rgba(0,0,0,1) 53%);
+  background-attachment: fixed; /* Creates the parallax effect */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;  border-radius: 20px;
   margin: 30px auto;
   max-width: 1200px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);

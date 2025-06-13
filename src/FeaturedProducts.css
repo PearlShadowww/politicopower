@@ -1,7 +1,12 @@
 .featured-products {
   padding: 30px 15px;
   text-align: center;
-  background-color: #1a1a1a;
+  background: rgb(128,83,28);
+  background: radial-gradient(circle, rgba(128,83,28,1) 0%, rgba(0,0,0,1) 53%);
+  background-attachment: fixed; /* Creates the parallax effect */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
   margin: 15px;
   border-radius: 10px;
 }

@@ -1,94 +1,108 @@
 /* Contact Us Section Styles */
 .contact-us-section {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping for better responsiveness */
-    padding: 40px 20px;
-    background-color: #f0f0f0; /* Light grey background */
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 30px;
+background: radial-gradient(circle, rgb(165, 107, 13) 0%, rgba(0,0,0,1) 53%);
+  background-attachment: fixed; /* Creates the parallax effect */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;  border-radius: 20px;  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.contact-info,
+.contact-form {
+  box-sizing: border-box;
+  flex: 1;
+  max-width: 50%;
+  padding: 30px;
+}
+
+.contact-info {
+  border-right: 2px solid #f9a826; /* Gold separator line */
+}
+
+.contact-info h2,
+.contact-form h2 {
+  font-size: 2rem;
+  color: #f9a826; /* Gold color for headings */
+  margin-bottom: 30px;
+  text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  color: #fff; /* White text for clarity */
+  margin-bottom: 15px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form p {
+  margin-bottom: 25px;
+}
+
+.contact-form label {
+  font-size: 1.1rem;
+  color: #fff; /* White text for clarity */
+  display: block;
+  margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #222; /* Dark background for input fields */
+  color: #fff; /* White text inside inputs */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: #333; /* Slightly lighter on focus */
+  border-color: #f9a826; /* Gold border on focus */
+  outline: none;
+}
+
+.contact-form button {
+  background-color: #f9a826; /* Gold button */
+  color: #000; /* Black text on button */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ffd166; /* Lighter gold on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+.contact-form button:active {
+  transform: translateY(0); /* Reset on click */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .contact-info,
   .contact-form {
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-    flex: 1; /* Equal flex values to make sections equal in width */
-    max-width: 50%; /* Ensure each section does not exceed 50% of container width */
+    max-width: 100%;
+    border-right: none; /* Remove separator line on mobile */
+    border-bottom: 2px solid #f9a826; /* Add bottom border instead */
+    margin-bottom: 30px;
   }
-  
-  .contact-form {
-    padding: 20px; /* Increased padding for form section */
-  }
-  
-  .contact-info {
-    padding: 20px; /* Increased padding inside the contact info section */
-    margin-left: 0px; /* Increased right margin for more space between sections */
-  }
-  
-  .contact-info h2 {
-    font-size: 1.8rem;
-    color: #4b0082; /* Purple color for heading */
-    margin-bottom: 20px;
-  }
-  
-  .contact-info p {
-    font-size: 1rem;
-    color: #333; /* Dark grey text color */
-    margin-bottom: 10px;
-  }
-  
-  .contact-form h2 {
-    font-size: 1.8rem;
-    color: #4b0082; /* Purple color for heading */
-    margin-bottom: 20px;
-  }
-  
-  .contact-form form {
-    display: flex;
+
+  .contact-us-section {
     flex-direction: column;
+    padding: 30px 15px;
   }
-  
-  .contact-form p {
-    margin-bottom: 20px;
-  }
-  
-  .contact-form label {
-    font-size: 1rem;
-    color: #333; /* Dark grey text color */
-    display: block;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc; /* Light grey border */
-    box-sizing: border-box; /* Include padding and border in width */
-  }
-  
-  .contact-form button {
-    background-color: #4b0082; /* Purple button */
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .contact-form button:hover {
-    background-color: #5e00a4; /* Darker purple on hover */
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .contact-info,
-    .contact-form {
-      max-width: 100%; /* Full width on mobile */
-      margin-right: 0; /* Remove right margin for mobile */
-      margin-left: 0; /* Remove left margin for mobile if needed */
-    }
-  
-    .contact-us-section {
-      flex-direction: column; /* Stack sections vertically on mobile */
-    }
-  }
-  
+}

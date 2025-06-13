@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import HeroSection from './HeroSection';
 import AboutUsSection from './AboutUsSection';
@@ -10,17 +10,18 @@ import ContactUs from './ContactUs';
 import Footer from './Footer';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import AOS from 'aos';
-import 'aos/dist/aos.css'
+import 'aos/dist/aos.css';
 import GridDesign from './GridDesign';
+import './App.css';
+import AnnouncementBar from './AnnouncementBar';
 
 AOS.init();
-
 
 // Add this component to handle the sticky WhatsApp button
 const WhatsAppButton = () => {
   return (
     <a
-      href="https://wa.me/8920038309?text=Hi%20there%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+      href="https://wa.me/8920038309?text=Hi%20there%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
       target="_blank"
       rel="noopener noreferrer"
       style={{
@@ -46,14 +47,23 @@ const WhatsAppButton = () => {
 function App() {
   return (
     <Router>
+      <AnnouncementBar />
       <Navbar />
-      <HeroSection />
-      <FeaturedProducts />
-      <AboutUsSection />
+      <div id="hero">
+        <HeroSection />
+      </div>
+      <div id="products">
+        <FeaturedProducts />
+      </div>
+      <div id="about">
+        <AboutUsSection />
+      </div>
       <GridDesign />
       <ClientTestimony />
       <ClientLogo />
-      <ContactUs />
+      <div id="contact">
+        <ContactUs />
+      </div>
       <Footer />
       <WhatsAppButton /> {/* Add the WhatsApp button here */}
     </Router>

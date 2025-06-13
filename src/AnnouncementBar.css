@@ -1,0 +1,11 @@
+/* AnnouncementBar.css */
+.announcement-bar {
+    background-color: #f9a826; /* Black background */
+    color: #000000; /* Gold text color */
+    padding: 5px;
+    font-size: 15px;
+    top: 0; /* Sticks to the top of the viewport */
+    z-index: 1000; /* Ensures it stays above other content */
+    text-align: center;
+}
+

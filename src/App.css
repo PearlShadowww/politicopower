@@ -1,6 +1,6 @@
 /* For WebKit browsers (Chrome, Safari, etc.) */
 ::-webkit-scrollbar {
-    width: 26px;  /* Width of the scrollbar */
+    width: 16px;  /* Width of the scrollbar */
     height: 26px; /* Height of the scrollbar */
 }
 
@@ -10,7 +10,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #001a82;  /* Scrollbar color (purple in this case) */
+    background-color: #f9a826 ;  /* Scrollbar color (purple in this case) */
     border-radius: 10px;         /* Making the scrollbar rounder */
     border: 4px solid #f1f1f1;   /* Adding padding inside the scrollbar to make it oval */
 }
@@ -48,5 +48,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 body {
-  font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white; /* Optional: Change text color for better visibility */
 }

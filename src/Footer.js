@@ -29,8 +29,8 @@ const Footer = () => {
       </div>
       <div className="footer-extra">
         <div className="extra-section">
-          <h3>Import Export CODE : </h3>
-          <p>Goods And Service Tax Number : </p>
+          <h3>Import Export CODE:</h3>
+          <p>Goods And Service Tax Number:</p>
         </div>
         <div className="extra-section">
           <h3>Contact Information</h3>

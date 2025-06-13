@@ -4,13 +4,13 @@ import './ClientLogo.css'; // Import the CSS file for styling
 const ClientLogo = () => {
   const logos = [
     'https://upload.wikimedia.org/wikipedia/commons/7/73/US_Democratic_Party_Logo.svg', 
-    'https://upload.wikimedia.org/wikipedia/commons/e/e1/Republican_Party_logo.svg', // USA
-    'https://upload.wikimedia.org/wikipedia/commons/4/4b/Conservative_Party_Logo.svg', 
-    'https://upload.wikimedia.org/wikipedia/commons/4/4e/Labour_Party_%28UK%29_logo.svg', // UK
-    'https://upload.wikimedia.org/wikipedia/commons/a/a2/CDU_Logo_2016.svg', 
-    'https://upload.wikimedia.org/wikipedia/commons/6/68/Logo_SPD.svg', // Germany
-    'https://upload.wikimedia.org/wikipedia/commons/5/56/Logo_LREM_2022.png', 
-    'https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_parti_socialiste.svg' // France
+    'https://upload.wikimedia.org/wikipedia/commons/9/9b/Republicanlogo.svg', // USA
+    'https://upload.wikimedia.org/wikipedia/en/4/4e/Conservative_Party_Logo.svg', 
+    'https://upload.wikimedia.org/wikipedia/sco/0/05/Logo_Labour_Party.svg', // UK
+    'https://upload.wikimedia.org/wikipedia/commons/0/0e/CDU_Logo_2023.svg', 
+    'https://upload.wikimedia.org/wikipedia/commons/4/4f/Logo_SPD_2019.png', // Germany
+    'https://upload.wikimedia.org/wikipedia/commons/b/b7/Logo-LREM-noir.svg', 
+    'https://upload.wikimedia.org/wikipedia/commons/2/2c/Logo_e_Partis%C3%AB_Socialiste_t%C3%AB_Shqip%C3%ABris%C3%AB.svg' // France
   ];
 
   return (

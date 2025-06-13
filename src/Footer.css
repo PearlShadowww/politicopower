@@ -1,104 +1,163 @@
-/* Footer.css */
-
+/* Footer Styles */
 .footer {
-    background-color: #4b0082; /* Purple background */
-    color: #fff; /* White text color */
-    padding: 40px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  background: radial-gradient(circle, rgb(165, 107, 13) 0%, rgba(0,0,0,1) 53%);
+  background-attachment: fixed; /* Creates the parallax effect */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;;  border-radius: 20px;  color: #fff; /* White text color */
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+}
+
+.footer:hover {
+  background-color: #1a1a1a; /* Slightly lighter black on hover */
+}
+
+.footer-logo {
+  flex: 1;
+  max-width: 35%; /* 35% for the logo section */
+  text-align: left;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.footer-logo h2 {
+  font-size: 2rem;
+  color: #f9a826; /* Gold color for the logo */
+  transition: color 0.3s ease;
+}
+
+.footer-logo h2:hover {
+  color: #ffffff; /* Change to white on hover */
+}
+
+.footer-links {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  max-width: 60%; /* Adjusted space for the links */
+  animation: slideIn 2s ease-in-out;
+}
+
+.links-column {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.links-column h3 {
+  color: #f9a826; /* Gold color for the headings */
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.links-column h3:hover {
+  color: #ffffff; /* Change to white on hover */
+}
+
+.links-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links-column ul li {
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.links-column ul li:hover {
+  transform: translateX(5px); /* Move to the right on hover */
+}
+
+.links-column ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.links-column ul li a:hover {
+  color: #f9a826; /* Hover effect with gold color */
+}
+
+.footer-extra {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.extra-section {
+  flex: 1;
+  margin: 10px 20px;
+}
+
+.extra-section h3 {
+  color: #f9a826; /* Gold color for the headings */
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.extra-section h3:hover {
+  color: #ffffff; /* Change to white on hover */
+}
+
+.extra-section p {
+  margin-bottom: 10px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.extra-section p:hover {
+  color: #f9a826; /* Hover effect with gold color */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logo, .footer-links, .footer-extra {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
   .footer-logo {
-    flex: 1;
-    max-width: 35%; /* 35% for the logo section */
-    text-align: left;
+    margin-bottom: 40px;
   }
-  
-  .footer-logo h2 {
-    font-size: 2rem;
-    color: #ffd700; /* Gold color for the logo */
-  }
-  
+
   .footer-links {
-    flex: 2;
-    display: flex;
-    justify-content: space-between;
-    max-width: 60%; /* Adjusted space for the links */
+    flex-direction: column;
+    animation: none; /* Remove slide-in animation for mobile */
   }
-  
+
   .links-column {
-    flex: 1;
-    margin: 0 20px;
+    margin: 0 auto 20px auto;
   }
-  
-  .links-column h3 {
-    color: #c0c0c0; /* Silver color for the headings */
-    margin-bottom: 15px;
-  }
-  
-  .links-column ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .links-column ul li {
-    margin-bottom: 10px;
-  }
-  
-  .links-column ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .links-column ul li a:hover {
-    color: #ffd700; /* Hover effect with gold color */
-  }
-  
-  .footer-extra {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 40px;
-  }
-  
-  .extra-section {
-    flex: 1;
-    margin: 10px 20px;
-  }
-  
-  .extra-section h3 {
-    color: #c0c0c0; /* Silver color for the headings */
-    margin-bottom: 15px;
-  }
-  
-  .extra-section p {
-    margin-bottom: 10px;
-    color: #fff;
-  }
-  
-  @media (max-width: 768px) {
-    .footer {
-      flex-direction: column;
-    }
-  
-    .footer-logo, .footer-links, .footer-extra {
-      max-width: 100%;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-  
-    .footer-logo {
-      margin-bottom: 40px;
-    }
-  
-    .footer-links {
-      flex-direction: column;
-    }
-  
-    .links-column {
-      margin: 0 auto 20px auto;
-    }
-  }
-  
+}

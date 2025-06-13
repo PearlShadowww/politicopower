@@ -4,7 +4,12 @@
   top: 0;
   margin: 20px;
   padding: 10px 20px;
-  background-color: #000; /* Black background color */
+  background: rgb(128,83,28);
+  background: radial-gradient(circle, rgba(128,83,28,1) 0%, rgba(0,0,0,1) 53%);
+  background-attachment: fixed; /* Creates the parallax effect */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
   color: #fff; /* White font color */
   border-radius: 15px; /* Rounded edges */
   display: flex;
@@ -12,6 +17,7 @@
   align-items: center;
   z-index: 1000; /* Ensure it stays on top */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 25px;
 }
 
 /* Logo Styles */
@@ -32,22 +38,33 @@
   text-decoration: none;
   color: #fff; /* White font color for links */
   font-size: 18px;
+  padding: 10px; /* Add padding for better click area */
+  border-radius: 5px; /* Rounded edges for links */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Hover Effect for Links */
+.link:hover {
+  background-color: #F9A826; /* Button color on hover */
+  color: #000; /* Change text color on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-  .navbar {
-    justify-content: center; /* Center the logo */
-    padding: 10px;
-    margin: 15px;
-    border-radius: 15px; /* Keep the rounded edges */
-  }
+    .navbar {
+        justify-content: center; /* Center the logo */
+        padding: 10px;
+        margin: 15px;
+        border-radius: 15px; /* Keep the rounded edges */
+    }
 
-  .logo {
-    font-size: 20px;
-  }
+    .logo {
+        font-size: 20px;
+    }
 
-  .navLinks {
-    display: none; /* Hide navigation links */
-  }
+    .navLinks {
+        display: none; /* Hide navigation links */
+    }
 }

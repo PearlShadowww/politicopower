@@ -1,73 +1,41 @@
-/* Hero Section Styles */
+/* HeroSection.css */
 .hero-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 40px 20px;
-  background-color: #ffffff; /* Light grey background */
-  border-radius: 2%;
-  margin: 10px;
+  position: relative; /* Position relative for absolute positioning of video */
+  height: 100vh; /* Full height */
+  overflow: hidden; /* Hide overflow */
+}
 
+#video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  object-fit: cover; /* Ensure the video covers the entire screen */
+  z-index: -1; /* Send the video behind other elements */
 }
 
 .hero-content {
+  position: relative; /* Position relative to allow z-index layering */
+  z-index: 1; /* Ensure content is above the video */
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Full height for centering */
 }
 
 .hero-text {
-  max-width: 50%;
+  color: #fff; /* White text color for contrast against video */
+  text-align: center; /* Centered text */
 }
 
 .hero-heading {
   font-size: 2.5rem;
-  color: #000000; /* Purple color for heading */
-  margin-bottom: 10px;
-}
-
-.hero-tagline {
-  font-size: 1.2rem;
-  color: #181818; /* Darker grey for tagline */
-  margin-bottom: 20px;
 }
 
 .cta-button {
-  display: inline-block;
+  background-color: #f9a826; /* Gold background */
+  color: #000; /* Black text */
   padding: 10px 20px;
-  font-size: 1rem;
-  color: #000000;
-  background-color: #F9A826; /* Purple background */
-  text-decoration: none;
   border-radius: 5px;
-  margin-top: 30px;
-  border: #000000 1px solid;
-}
-
-.cta-button:hover {
-  background-color: #000000;
-  color: #ffffff /* Darker purple for hover effect */
-}
-
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .hero-image {
-    order: -1; /* Move the image to the top */
-  }
 }

@@ -1,68 +1,91 @@
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .grid-item {
-    border-radius: 8px;
-    padding: 20px;
-    color: #000;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .grid-item:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Background colors */
-  .yellow-bg {
-    background-color: #f9a826;
-    border: 2px solid #000;
-    color: #fff;
-  }
-  
-  .blue-bg {
-    background-color: #000;
-    border: 2px solid #f9a826;
-    color: #f9a826;
-  }
-  
-  .pink-bg {
-    background-color: #fff;
-    border: 2px solid #f9a826;
-    color: #000;
-  }
-  
-  .brown-bg {
-    background-color: #f9a826;
-    border: 2px solid #fff;
-    color: #fff;
-  }
-  
-  .green-bg {
-    background-color: #000;
-    border: 2px solid #f9a826;
-    color: #f9a826;
-  }
-  
-  /* CTA Button */
-  .cta-button {
-    background-color: #f9a826;
-    color: #fff;
-    border: 2px solid #000;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .cta-button:hover {
-    background-color: #fff;
-    color: #f9a826;
-    border: 2px solid #000;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background: radial-gradient(circle, rgb(165, 107, 13) 0%, rgba(0,0,0,1) 53%);
+  background-attachment: fixed; /* Creates the parallax effect */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;  border-radius: 20px;
+}
+
+.grid-item {
+  border-radius: 8px;
+  padding: 20px;
+  color: #000;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Background colors */
+.yellow-bg {
+  background-color: #000;
+  border: 2px solid #f9a826;
+  color: #f9a826;
+}
+
+.blue-bg {
+  background-color: #000;
+  border: 2px solid #f9a826;
+  color: #f9a826;
+}
+
+.pink-bg {
+  background-color: #000;
+  border: 2px solid #f9a826;
+  color: #f9a826;
+}
+
+.brown-bg {
+  background-color: #000;
+  border: 2px solid #f9a826;
+  color: #f9a826;
+}
+
+.green-bg {
+  background-color: #000;
+  border: 2px solid #f9a826;
+  color: #f9a826;
+}
+
+/* CTA Button */
+.cta-button {
+  background-color: #f9a826;
+  color: #fff;
+  border: 2px solid #000;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added transform transition */
+}
+
+.cta-button:hover {
+  background-color: #fff;
+  color: #f9a826;
+  border-color: #000; /* Keep the same border on hover */
+}
+
+/* Add animation for the entire grid */
+@keyframes fadeInUp {
+ from {
+     opacity: 0; 
+     transform: translateY(20px);
+ }
+ to {
+     opacity: 1; 
+     transform: translateY(0);
+ }
+}
+
+.grid-item[data-aos='fade-up'] {
+ animation-name: fadeInUp; /* Applying fadeInUp animation */
+ animation-duration: .5s; /* Duration of the animation */
+ animation-fill-mode: both; /* Maintain styles after animation */
+}
